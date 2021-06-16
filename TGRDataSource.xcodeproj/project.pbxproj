@@ -20,6 +20,12 @@
 		9929008419143212003D0087 /* TGRFetchedResultsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9929008319143212003D0087 /* TGRFetchedResultsCollectionViewController.m */; };
 		993DB7E71901990000653166 /* TGRFetchedResultsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 993DB7E61901990000653166 /* TGRFetchedResultsDataSource.m */; };
 		993DB7EA1901B86300653166 /* TGRFetchedResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 993DB7E91901B86300653166 /* TGRFetchedResultsTableViewController.m */; };
+		FAD65E2B267A1CC9007EE4E4 /* NSObject+Abstract.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C568919017DAD00E382F1 /* NSObject+Abstract.m */; };
+		FAD65E2F267A1CCC007EE4E4 /* TGRDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C568619017CB400E382F1 /* TGRDataSource.m */; };
+		FAD65E33267A1CCF007EE4E4 /* TGRArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C568C19017EBA00E382F1 /* TGRArrayDataSource.m */; };
+		FAD65E37267A1CD3007EE4E4 /* TGRFetchedResultsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 993DB7E61901990000653166 /* TGRFetchedResultsDataSource.m */; };
+		FAD65E3B267A1CD8007EE4E4 /* TGRFetchedResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 993DB7E91901B86300653166 /* TGRFetchedResultsTableViewController.m */; };
+		FAD65E3F267A1CDD007EE4E4 /* TGRFetchedResultsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9929008319143212003D0087 /* TGRFetchedResultsCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +40,15 @@
 
 /* Begin PBXCopyFilesBuildPhase section */
 		990C565A19017A3400E382F1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAD65E1A267A1ADC007EE4E4 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
@@ -66,6 +81,7 @@
 		993DB7E61901990000653166 /* TGRFetchedResultsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGRFetchedResultsDataSource.m; sourceTree = "<group>"; };
 		993DB7E81901B86300653166 /* TGRFetchedResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGRFetchedResultsTableViewController.h; sourceTree = "<group>"; };
 		993DB7E91901B86300653166 /* TGRFetchedResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGRFetchedResultsTableViewController.m; sourceTree = "<group>"; };
+		FAD65E1C267A1ADC007EE4E4 /* libTGRDataSource.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTGRDataSource.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +104,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FAD65E19267A1ADC007EE4E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -106,6 +129,7 @@
 			children = (
 				990C565C19017A3400E382F1 /* libTGRDataSource.a */,
 				990C566C19017A3400E382F1 /* TGRDataSourceTests.xctest */,
+				FAD65E1C267A1ADC007EE4E4 /* libTGRDataSource.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -204,6 +228,23 @@
 			productReference = 990C566C19017A3400E382F1 /* TGRDataSourceTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		FAD65E1B267A1ADC007EE4E4 /* TGRDataSourceTVOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAD65E22267A1ADC007EE4E4 /* Build configuration list for PBXNativeTarget "TGRDataSourceTVOS" */;
+			buildPhases = (
+				FAD65E18267A1ADC007EE4E4 /* Sources */,
+				FAD65E19267A1ADC007EE4E4 /* Frameworks */,
+				FAD65E1A267A1ADC007EE4E4 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TGRDataSourceTVOS;
+			productName = TGRDataSourceTVOS;
+			productReference = FAD65E1C267A1ADC007EE4E4 /* libTGRDataSource.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -213,12 +254,19 @@
 				CLASSPREFIX = TGR;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Guillermo Gonzalez";
+				TargetAttributes = {
+					FAD65E1B267A1ADC007EE4E4 = {
+						CreatedOnToolsVersion = 12.4;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = 990C565719017A3400E382F1 /* Build configuration list for PBXProject "TGRDataSource" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 990C565319017A3400E382F1;
@@ -228,6 +276,7 @@
 			targets = (
 				990C565B19017A3400E382F1 /* TGRDataSource */,
 				990C566B19017A3400E382F1 /* TGRDataSourceTests */,
+				FAD65E1B267A1ADC007EE4E4 /* TGRDataSourceTVOS */,
 			);
 		};
 /* End PBXProject section */
@@ -262,6 +311,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				990C567C19017A3400E382F1 /* TGRDataSourceTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAD65E18267A1ADC007EE4E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAD65E2B267A1CC9007EE4E4 /* NSObject+Abstract.m in Sources */,
+				FAD65E33267A1CCF007EE4E4 /* TGRArrayDataSource.m in Sources */,
+				FAD65E37267A1CD3007EE4E4 /* TGRFetchedResultsDataSource.m in Sources */,
+				FAD65E3B267A1CD8007EE4E4 /* TGRFetchedResultsTableViewController.m in Sources */,
+				FAD65E3F267A1CDD007EE4E4 /* TGRFetchedResultsCollectionViewController.m in Sources */,
+				FAD65E2F267A1CCC007EE4E4 /* TGRDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,7 +424,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TGRDataSource/TGRDataSource-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TGRDataSource;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -374,7 +436,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TGRDataSource/TGRDataSource-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TGRDataSource;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -415,6 +477,86 @@
 			};
 			name = Release;
 		};
+		FAD65E23267A1ADC007EE4E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TGRDataSource/TGRDataSource-Prefix.pch";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = TGRDataSource;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+			};
+			name = Debug;
+		};
+		FAD65E24267A1ADC007EE4E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TGRDataSource/TGRDataSource-Prefix.pch";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = TGRDataSource;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -441,6 +583,15 @@
 			buildConfigurations = (
 				990C568319017A3400E382F1 /* Debug */,
 				990C568419017A3400E382F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAD65E22267A1ADC007EE4E4 /* Build configuration list for PBXNativeTarget "TGRDataSourceTVOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAD65E23267A1ADC007EE4E4 /* Debug */,
+				FAD65E24267A1ADC007EE4E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
